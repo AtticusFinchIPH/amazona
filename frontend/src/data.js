@@ -1,6 +1,7 @@
 export default {
     products: [
         {
+            _id: "1",
             name: "Slim shirt",
             image: "/images/d1.jpg",
             brand: "Nike",
@@ -10,6 +11,7 @@ export default {
             category: "shirts"
         },
         {
+            _id: "2",
             name: "Nice shirt",
             image: "/images/d1.jpg",
             brand: "Nike",
@@ -19,6 +21,7 @@ export default {
             category: "shirts"
         },
         {
+            _id: "3",
             name: "Long pants",
             image: "/images/d1.jpg",
             brand: "Nike",
