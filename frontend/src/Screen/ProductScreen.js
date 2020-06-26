@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
 
 function ProductScreen(props) {
-    // console.log(props.match.params.id);
-    // const product = data.products.find(x => x._id === props.match.params.id)
+    const [qty, setQty] = useState(1);
     const productDetails = useSelector(state => state.productDetails);
-    console.log(productDetails);
     const {product, loading, error} = productDetails;
     const dispatch = useDispatch();
     useEffect(() => {
@@ -55,11 +53,10 @@ function ProductScreen(props) {
                             Status: {product.status}
                         </li>
                         <li>
-                            Qty: <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
+                            Qty: <select value={qty} onChange={(e) => {setQty(e.target.value)}}>
+                                {[...Array(product.countInStock).keys()].map(x =>
+                                    <option value={x+1}>{x+1}</option>   
+                                )}
                             </select>
                         </li>
                         <li>

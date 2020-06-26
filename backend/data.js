@@ -8,7 +8,8 @@ export default {
             price: "60",
             rating: 4.5,
             review: 10,
-            category: "shirts"
+            category: "shirts",
+            countInStock: 6
         },
         {
             _id: "2",
@@ -18,7 +19,8 @@ export default {
             price: "80",
             rating: 4.5,
             review: 25,
-            category: "shirts"
+            category: "shirts",
+            countInStock: 10
         },
         {
             _id: "3",
@@ -28,7 +30,8 @@ export default {
             price: "90",
             rating: 4.5,
             review: 6,
-            category: "pants"
+            category: "pants",
+            countInStock: 15
         }
     ]
 }

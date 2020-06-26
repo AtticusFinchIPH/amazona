@@ -158,7 +158,7 @@ a:hover{
 }
 .details-action{
   flex: 1 1 30rem;
-  border: .1rem;
+  border: .1rem solid;
   border-radius: 0.5rem;
   background-color: #f8f8f8;
   padding: 1rem;
@@ -173,6 +173,25 @@ a:hover{
 .details-action ul li:last-child{
   display: flex;
   flex-direction: column;
+}
+.details-action select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: #2c3e50;
+  background-image: none;
+  color: #ffffff;
+  flex: 1;
+  padding: 0 .5em;
+  cursor: pointer;
+  width: 3em;
+  height: 2em;
+  line-height: 2;
+  overflow: hidden;
+  border-radius: .25em;
 }
 .button{
   padding: 1rem;
