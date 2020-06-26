@@ -9,7 +9,7 @@ export default {
             rating: 4.5,
             review: 10,
             category: "shirts",
-            countInStock: 6
+            countInStock: 0
         },
         {
             _id: "2",
