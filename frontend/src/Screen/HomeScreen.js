@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 
 function HomeScreen(props) {
-    const [products, setProduct] = useState([]);
+    const productList = useSelector(state => state.productList);
+    const {products, loading, error} = productList;
+    const dispatch = useDispatch();
     useEffect(() => {
-        const fetchData = async () => {
-            const {data} = await axios.get("/api/products");
-            setProduct(data);
-        }
-        fetchData();
+        dispatch(listProducts());
         return () => {
             //
         }
     }, [])
-    return (
+    return loading ? <div>Loading...</div> :
+        error ? <div>{error}</div> :
         <ul className="products">
             {
                 products.map(product => 
@@ -33,7 +34,7 @@ function HomeScreen(props) {
                 </li>)
             }
         </ul>
-    )
+    
 }
 
 export default HomeScreen;
