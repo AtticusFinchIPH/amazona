@@ -10,6 +10,12 @@ body{
 #root{
   height: 100%;
 }
+button{
+  font-size: 1.6rem;
+}
+.full-width {
+  width: 100%;
+}
 .grid-container{
   display: grid;
   height: 100%;
@@ -250,7 +256,8 @@ a:hover{
 }
 .cart-actions{
   flex: 1 1 20rem;
-  background-color: #f8f8f8;
+  background-color: #f0f0f0;
+  border: #808080 solid;
   border-radius: 0.5rem;
   padding: 1rem;
 }
